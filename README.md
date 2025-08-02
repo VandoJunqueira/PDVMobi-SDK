@@ -17,32 +17,38 @@ Recomenda-se instalar via Composer:
 ## Uso
 ### PHP Puro
 
-    require 'vendor/autoload.php';
-    
-    use PDVMobi\PDVMobi;
-    
-    $pdv = new PDVMobi();
-    $pdv->setAuthorization('seu_token_aqui');
-    
-    $usuarios = $pdv->users->listar();
-    print_r($usuarios);
+```php
+require 'vendor/autoload.php';
+
+use PDVMobi\PDVMobi;
+
+$pdv = new PDVMobi();
+$pdv->setAuthorization('seu_token_aqui');
+
+$usuarios = $pdv->users->listar();
+print_r($usuarios);
+```
 
 ### Laravel
 O SDK detecta automaticamente o ambiente Laravel. Você pode registrar o Service Provider em `config/app.php`:
 
-    'providers' => [
-        // ...
-        PDVMobi\Laravel\PDVMobiServiceProvider::class,
-    ],
+```php
+'providers' => [
+    // ...
+    PDVMobi\Laravel\PDVMobiServiceProvider::class,
+],
+```
 
 Uso no Laravel:
 
-    use PDVMobi\PDVMobi;
-    
-    $pdv = app(PDVMobi::class);
-    $pdv->setAuthorization('seu_token_aqui');
-    
-    $produtos = $pdv->products->listar();
+```php
+use PDVMobi\PDVMobi;
+
+$pdv = app(PDVMobi::class);
+$pdv->setAuthorization('seu_token_aqui');
+
+$produtos = $pdv->products->listar();
+```
 
 ## Configuração
 Variáveis de ambiente:
