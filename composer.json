@@ -1,0 +1,36 @@
+{
+    "name": "vandojunqueira/pdvmobi-sdk",
+    "description": "SDK para integração com PDVMobi (POS Controle)",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vando Junqueira",
+            "homepage": "https://github.com/VandoJunqueira"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PDVMobi\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "PDVMobi\\Laravel\\PDVMobiServiceProvider"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "illuminate/support": "^10.10",
+        "phpunit/phpunit": "^11.5"
+    }
+}
