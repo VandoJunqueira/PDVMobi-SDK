@@ -50,6 +50,22 @@ $pdv->setAuthorization('seu_token_aqui');
 $produtos = $pdv->products->listar();
 ```
 
+## Componentes disponíveis
+
+| Chave          | Classe           |
+|----------------|------------------|
+| auth           | Auth::class      |
+| users          | Users::class     |
+| products       | Products::class  |
+| productGroups  | ProductGroups::class |
+| personalCards  | PersonalCards::class |
+| closedDraw     | ClosedDraw::class|
+| vrfTicket      | VrfTicket::class |
+| sales          | Sales::class     |
+| pedidos        | Pedidos::class   |
+| combos         | ProductCombos::class |
+| NFCe           | NFCe::class      |
+
 ## Configuração
 Variáveis de ambiente:
 
