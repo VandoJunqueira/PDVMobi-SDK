@@ -16,7 +16,7 @@ class ApiConnection
 
     public function __construct()
     {
-        $this->baseUrl = env('PDV_MOBI_BASE_URL');
+        $this->baseUrl = (string) env('PDV_MOBI_BASE_URL');
         $this->subscriptionKey = env('PDV_MOBI_SUBSCRIPTION_KEY');
     }
 
